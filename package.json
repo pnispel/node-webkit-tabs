@@ -1,0 +1,12 @@
+{
+  "main": "index.html",
+  "name": "nw-demo",
+  "version": "0.1.0",
+  "window": {
+    "title": "node-webkit demo",
+    "toolbar": true
+  },
+  "webkit": {
+    "plugin": true
+  }
+}

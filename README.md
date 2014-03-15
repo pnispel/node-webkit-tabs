@@ -1,0 +1,1 @@
+build with zip -r ../${PWD##*/}.nw *
