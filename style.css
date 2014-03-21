@@ -1,4 +1,100 @@
-div {
+html, body {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+}
+
+.tabbar {
+  box-sizing: border-box;
+  z-index: 1;
+  position: relative;
+  height: 43px;
+  background: #222222;
+  box-shadow: inset 0 -8px 8px -4px rgba(0, 0, 0, 0.15);
+  padding: 0 0 0 10px;
+  margin: 0;
+  -webkit-app-region: drag;
+}
+
+.tabbar:window-inactive {
+  background-color: red;
+}
+
+.tabbar:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 8px;
+  left: 0px;
+  width: 100%;
+  background-color: #222222;
+  border-top: 1px solid #484848;
+  border-bottom: 1px solid #111111;
+}
+
+.tab.drag {
+  background: red;
+  -webkit-app-region: drag !important;
+}
+
+.draggable {
   height: 100px;
   width: 100px;
+  background-color: red;
+}
+
+.tab.selected {
+  z-index: 3;
+}
+
+.tab.selected:before {
+  background-color: #FFF;
+  background-image: -webkit-linear-gradient(top, #343434, #222222);
+}
+
+.tab:before {
+  border-radius: 5px 5px 0 0;
+  background: #EFEFEF;
+  background-image: -webkit-linear-gradient(top, #454545, #333333);
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-left: 1px solid #AAA;
+  border-right: 1px solid #AAA;
+  border-top: 1px solid #AAA;
+  border-bottom: none;
+  border: none;
+  box-shadow: inset 1px 1px 0 #484848, -4px 0px 4px rgba(0, 0, 0, 0.1);
+  -webkit-transform: perspective(5px) rotateX(1deg);
+  -webkit-transform-origin: bottom;
+  -webkit-app-region: no-drag;
+}
+
+.tab {
+  padding-top: 8px;
+  padding-left: 25px;
+  box-sizing: border-box;
+  height: 36px;
+  width: 180px;
+  font-size: 0.8em;
+
+  position: absolute;
+  display: inline-block;
+  text-align: left;
+  font-family: sans-serif;
+  color: #585858;
+  z-index: 2;
+
+  top: 5px;
+  height: 30px;
+  line-height: 17px;
+  color: #aaaaaa;
+
+  transition: color 0.1s ease-in;
 }

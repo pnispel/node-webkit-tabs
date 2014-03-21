@@ -4,7 +4,10 @@
   "version": "0.1.0",
   "window": {
     "title": "node-webkit demo",
-    "toolbar": true
+    "transparent": true,
+    "toolbar": false,
+    "frame": false,
+    "glass": true
   },
   "webkit": {
     "plugin": true
